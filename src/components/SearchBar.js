@@ -12,7 +12,6 @@ export const SearchBar = () => {
     useEffect(() => {
         getAllShows().then((res) => {
             setShows(res.data)
-
             // eslint-disable-next-line        
         })
     }, [])
@@ -20,16 +19,15 @@ export const SearchBar = () => {
     const onSearchHandler = (e) => {
         e.preventDefault();
         if (search === "") {
-            alert("Please enter something")
+            alert("Please enter something");
         }
         else {
             getTvShows(search).then((res) => {
                 const response = res.data.map((item) => item.show)
                 setShows(response);
-        
-                setSearch("")
+                setSearch("");
             })
-        }  
+        }
     }
 
     return (
@@ -47,8 +45,8 @@ export const SearchBar = () => {
             </form>
             <div className="home__list">
                 {shows && shows
-                .sort((a, b) =>  b.rating.average - a.rating.average )
-                .map((item) => {
+                    .sort((a, b) => b.rating.average - a.rating.average)
+                    .map((item) => {
                         return (
                             <ItemList
                                 name={item.name}
