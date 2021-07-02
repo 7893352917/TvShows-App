@@ -14,6 +14,7 @@ import React from 'react'
                 <li> Axios AJAX Request </li>
                 <li> TVMAZE API (https://www.tvmaze.com/api)</li>
                 <li> React Router </li>
+                <li> Responsive Web Design - CSS Media Queries </li>
             </ul>
         </div>
         </div>
