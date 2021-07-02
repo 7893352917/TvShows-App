@@ -26,7 +26,7 @@ export const SearchBar = () => {
             getTvShows(search).then((res) => {
                 const response = res.data.map((item) => item.show)
                 setShows(response);
-                // console.log(shows)
+        
                 setSearch("")
             })
         }  
